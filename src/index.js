@@ -1,12 +1,13 @@
 const encode = () =>{
     const offSet = document.getElementById('posicionesC').value;
-    const letter = document.getElementById('mensajeC').nodeValue;
+    const letter = document.getElementById('mensajeC').value;
+    let result ="";
     for(let i=0; i<letter.length; i++){
         const nletra = letter.charCodeAt(i);
-        const formula = (nletra - 65 + offSet) % 26 + 65;
-        let result = (String.fromCharCode(formula));
-        document.getElementById('resultado').innerHTML = result;
+        const formula = ((nletra - 65 + offSet) % 26 )+ 65;
+        result = result + (String.fromCharCode(formula));
     }
+    document.getElementById('resultado').innerHTML = result;
 }
 
 const decode = () =>{
