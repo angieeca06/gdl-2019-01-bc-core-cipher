@@ -1,7 +1,7 @@
 const encode = () =>{
     const offSet = document.getElementById('posicionesC').value;
     const letter = document.getElementById('mensajeC').value;
-    let result ="";
+    let result = "";
     for(let i=0; i<letter.length; i++){
         const nletra = letter.charCodeAt(i);
         const formula = ((nletra - 65 + offSet) % 26 )+ 65;
@@ -15,7 +15,7 @@ const decode = () =>{
     const word = 'ABC';
     for(let i=0; i<word.length; i++){
         const nletra = word.charCodeAt(i);
-        const formula = (nletra + 65 - offSet) % 26 - 65;
+        const formula = ((nletra + 65 - offSet) % 26) - 65;
         console.log(String.fromCharCode(formula));
     }
 }
