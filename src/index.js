@@ -1,5 +1,5 @@
 const encode = () =>{
-    const offSet = document.getElementById('posicionesC').value;
+    const offSet = parseInt(document.getElementById('posicionesC').value);
     const letter = document.getElementById('mensajeC').value;
     let result = "";
     for(let i=0; i<letter.length; i++){
@@ -7,19 +7,26 @@ const encode = () =>{
         const formula = ((nletra - 65 + offSet) % 26 )+ 65;
         result = result + (String.fromCharCode(formula));
     }
-    document.getElementById('resultado').innerHTML = result;
+    document.getElementById('resultadoC').innerHTML = result;
 }
 
 const decode = () =>{
-    const offSet = 4;
-    const word = 'ABC';
-    for(let i=0; i<word.length; i++){
-        const nletra = word.charCodeAt(i);
-        const formula = ((nletra + 65 - offSet) % 26) - 65;
-        console.log(String.fromCharCode(formula));
+    const offSet = parseInt(document.getElementById('posicionesD').value);
+    const letter = document.getElementById('mensajeD').value;
+    let result = "";
+    for(let i=0; i<letter.length; i++){
+        const nletra = letter.charCodeAt(i);
+        const formula = ((nletra + 65 - offSet) % 26 )+ 65;
+        result = result + (String.fromCharCode(formula));
     }
+    document.getElementById('resultadoD').innerHTML = result;
 }
-console.log(decode());
+
+const clear = () =>{
+    document.getElementById('clear').innerHTML = null;
+    
+   // document.getElementById('mensajeC').reset();
+}
 
 const selectCipher = () =>{
     const hide = document.getElementById('Page1');

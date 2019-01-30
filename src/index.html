@@ -21,11 +21,11 @@
         posiciones más adelante en el alfabeto.
         <a target="_blank" href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar">Da click para saber
           más sobre el cifrado cesar</a></p>
-      <br />
-      <br />
+       <br />
+        <br />
       <p>¿Qué deseas realizar?</p>
-      <br />
-      <br />
+        <br />
+        <br />
       <form>
         <button type="button" id='cifrar' onclick="selectCipher()">Cifrar</button>
         <button type="button" id='descifrar' onclick="selectDescipher()">Descifrar</button>
@@ -33,49 +33,49 @@
     </section>
     <!--Página 2-->
     <div id="Page2">
-      <form>
-      <label for="posicionesC">¿Cuántas posiciones deseas desplazar?</label>
-      <br />
-        <input type="number" id="posicionesC" placeholder="Posiciones de desplazamiento" autofocus>
+      <form id="clear">
+        
+          <label for="posicionesC">¿Cuántas posiciones deseas desplazar?</label>
+            <br />
+          <input type="number" id="posicionesC" placeholder="Posiciones de desplazamiento" autofocus>
+          <br />
+        <label for="mensajeC">¿Cuál es el mensaje que deseas cifrar?</label>
+           <br />
+          <input type="text" id="mensajeC" placeholder="Escribe tu mensaje aquí">
+          <br />
+        <button type="reset" name="limpiar">Limpiar</button>
+        <button type="text" id='enviarP3' onclick="menssageCipher(); encode()">Enviar</button>
       </form>
-      <br />
-      <label for="mensajeC">¿Cuál es el mensaje que deseas cifrar?</label>
-      <br />
-      <form>
-        <input type="text" id="mensajeC" placeholder="Escribe tu mensaje aquí">
-      </form>
-      <br />
-      <button type="text" id='enviarP3' onclick="menssageCipher(); encode()">Enviar</button>
     </div>
     <!--Página 3-->
     <div id="Page3">
-      <h2>Tu mensaje cifrado es...<span id="resultado">dfbg</span></h2>
-      <br />
-      <br />
+      <h2>Tu mensaje cifrado es...<span id="resultadoC"></span></h2>
+        <br />
+        <br />
       <button type="text" id='enviarP1' onclick="pageStarC()">Volver al inicio</button>
     </div>
     <!--Página 4-->
     <div id="Page4">
       <p>¿Cuántas posiciones desplazadas tiene el cifrado?</p>
-      <br />
+       <br />
       <form>
         <input type="text" id="posicionesD" placeholder="Posiciones del cifrado">
       </form>
-      <br />
+        <br />
       <p>¿Cuál es el mensaje que deseas descifrar?</p>
-      <br />
+       <br />
       <form>
         <input type="text" id="mensajeD" placeholder="Escribe tu mensaje aquí">
       </form>
-      <br />
-      <button type="text" id='enviarP3' onclick="menssageDescipher()">Enviar</button>
+        <br />
+      <button type="text" id='enviarP3' onclick="menssageDescipher(); decode()">Enviar</button>
     </div>
     <!--Página 5-->
     <div id="Page5">
-      <p>Tu mensaje descifrado es...</p>
-      <br />
-      <br />
-      <button type="text" id='enviarP1' onclick="pageStarD()">Volver al inicio</button>
+      <p>Tu mensaje descifrado es...<span id=resultadoD></span></p>
+       <br />
+       <br />
+      <button type="text" id='enviarP1' onclick="pageStarD()" value="Reset form">Volver al inicio</button>
     </div>
   </div>
 </body>
