@@ -1,32 +1,18 @@
-const encode = () =>{
+const datesEncode = () =>{
     const offSet = parseInt(document.getElementById('posicionesC').value);
     const letter = document.getElementById('mensajeC').value;
-    let result = "";
-    for(let i=0; i<letter.length; i++){
-        const nletra = letter.charCodeAt(i);
-        const formula = ((nletra - 65 + offSet) % 26 )+ 65;
-        result = result + (String.fromCharCode(formula));
-    }
+    const result = window.cipher.encode(offSet, letter);
     document.getElementById('resultadoC').innerHTML = result;
-}
+};
+ document.getElementById('enviarP3').addEventListener('click',datesEncode);
 
-const decode = () =>{
+const datesDecode = () =>{
     const offSet = parseInt(document.getElementById('posicionesD').value);
     const letter = document.getElementById('mensajeD').value;
-    let result = "";
-    for(let i=0; i<letter.length; i++){
-        const nletra = letter.charCodeAt(i);
-        const formula = ((nletra + 65 - offSet) % 26 )+ 65;
-        result = result + (String.fromCharCode(formula));
-    }
+    const result = window.cipher.decode(letter, offSet);
     document.getElementById('resultadoD').innerHTML = result;
 }
-
-const clear = () =>{
-    document.getElementById('clear').innerHTML = null;
-    
-   // document.getElementById('mensajeC').reset();
-}
+document.getElementById('enviarP4').addEventListener('click',datesDecode);
 
 const selectCipher = () =>{
     const hide = document.getElementById('Page1');
@@ -34,6 +20,7 @@ const selectCipher = () =>{
     hide.style.display = 'none';
     show.style.display = 'block';
 }
+document.getElementById('cifrar').addEventListener('click',selectCipher);
 
 const selectDescipher = () =>{
     const hide = document.getElementById('Page1');
@@ -41,6 +28,7 @@ const selectDescipher = () =>{
     hide.style.display = 'none';
     show.style.display = 'block';
 }
+document.getElementById('descifrar').addEventListener('click',selectDescipher);
 
 const menssageCipher = () =>{
     const hide = document.getElementById('Page2');
@@ -48,6 +36,7 @@ const menssageCipher = () =>{
     hide.style.display = 'none';
     show.style.display = 'block';
 }
+document.getElementById('enviarP3').addEventListener('click', menssageCipher);
 
 const menssageDescipher = () =>{
     const hide = document.getElementById('Page4');
@@ -55,6 +44,7 @@ const menssageDescipher = () =>{
     hide.style.display = 'none';
     show.style.display = 'block';
 }
+document.getElementById('enviarP4').addEventListener('click',menssageDescipher);
 
 const pageStarD = () =>{
     const hide = document.getElementById('Page5');
@@ -62,6 +52,7 @@ const pageStarD = () =>{
     hide.style.display = 'none';
     show.style.display = 'block';
 }
+document.getElementById('enviarP1D').addEventListener('click',pageStarD);
 
 const pageStarC = () =>{
     const hide = document.getElementById('Page3');
@@ -69,3 +60,4 @@ const pageStarC = () =>{
     hide.style.display = 'none';
     show.style.display = 'block';
 }
+document.getElementById('enviarP1C').addEventListener('click',pageStarC);

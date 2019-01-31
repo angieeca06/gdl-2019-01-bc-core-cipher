@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="cipher.js"></script>
-  <script src="index.js"></script>
 </head>
 
 <body>
@@ -27,8 +25,8 @@
         <br />
         <br />
       <form>
-        <button type="button" id='cifrar' onclick="selectCipher()">Cifrar</button>
-        <button type="button" id='descifrar' onclick="selectDescipher()">Descifrar</button>
+        <button type="button" id='cifrar'>Cifrar</button>
+        <button type="button" id='descifrar'>Descifrar</button>
       </form>
     </section>
     <!--Página 2-->
@@ -43,41 +41,45 @@
            <br />
           <input type="text" id="mensajeC" placeholder="Escribe tu mensaje aquí">
           <br />
-        <button type="reset" name="limpiar">Limpiar</button>
-        <button type="text" id='enviarP3' onclick="menssageCipher(); encode()">Enviar</button>
+          <button type="reset" name="limpiar">Limpiar</button>
+          <br />
       </form>
+      <button type="text" id='enviarP3'>Enviar</button>
     </div>
     <!--Página 3-->
     <div id="Page3">
       <h2>Tu mensaje cifrado es...<span id="resultadoC"></span></h2>
         <br />
         <br />
-      <button type="text" id='enviarP1' onclick="pageStarC()">Volver al inicio</button>
+      <button type="text" id='enviarP1C'>Volver al inicio</button>
     </div>
     <!--Página 4-->
     <div id="Page4">
-      <p>¿Cuántas posiciones desplazadas tiene el cifrado?</p>
-       <br />
       <form>
-        <input type="text" id="posicionesD" placeholder="Posiciones del cifrado">
-      </form>
+      <label for="posicionesD">¿Cuántas posiciones desplazadas tiene el cifrado?</p>
+       <br />
+        <input type="number" id="posicionesD" placeholder="Posiciones del cifrado">
         <br />
-      <p>¿Cuál es el mensaje que deseas descifrar?</p>
+      <label for="mensajeD">¿Cuál es el mensaje que deseas descifrar?</label>
        <br />
-      <form>
         <input type="text" id="mensajeD" placeholder="Escribe tu mensaje aquí">
-      </form>
         <br />
-      <button type="text" id='enviarP3' onclick="menssageDescipher(); decode()">Enviar</button>
+      <button type="text" id='enviarP4'>Enviar</button>
+      <br />
+        <button type="reset" name="limpiar">Limpiar</button>
+      <br />
+    </form>
     </div>
     <!--Página 5-->
     <div id="Page5">
       <p>Tu mensaje descifrado es...<span id=resultadoD></span></p>
        <br />
        <br />
-      <button type="text" id='enviarP1' onclick="pageStarD()" value="Reset form">Volver al inicio</button>
+      <button type="text" id='enviarP1D'>Volver al inicio</button>
     </div>
   </div>
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
