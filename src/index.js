@@ -9,9 +9,9 @@ const datesEncode = () =>{
 const datesDecode = () =>{
     const offSet = parseInt(document.getElementById('posicionesD').value);
     const letter = document.getElementById('mensajeD').value;
-    const result = window.cipher.decode(letter, offSet);
+    const result = window.cipher.decode(offSet, letter);
     document.getElementById('resultadoD').innerHTML = result;
-}
+};
 document.getElementById('enviarP4').addEventListener('click',datesDecode);
 
 const selectCipher = () =>{
@@ -19,7 +19,7 @@ const selectCipher = () =>{
     const show = document.getElementById('Page2');
     hide.style.display = 'none';
     show.style.display = 'block';
-}
+};
 document.getElementById('cifrar').addEventListener('click',selectCipher);
 
 const selectDescipher = () =>{
@@ -27,23 +27,25 @@ const selectDescipher = () =>{
     const show = document.getElementById('Page4');
     hide.style.display = 'none';
     show.style.display = 'block';
-}
+};
 document.getElementById('descifrar').addEventListener('click',selectDescipher);
 
-const menssageCipher = () =>{
+const menssageCipher = (event) =>{
+    event.preventDefault();
     const hide = document.getElementById('Page2');
     const show = document.getElementById('Page3');
     hide.style.display = 'none';
     show.style.display = 'block';
-}
+};
 document.getElementById('enviarP3').addEventListener('click', menssageCipher);
 
-const menssageDescipher = () =>{
+const menssageDescipher = (event) =>{
+    event.preventDefault();
     const hide = document.getElementById('Page4');
     const show = document.getElementById('Page5');
     hide.style.display = 'none';
     show.style.display = 'block';
-}
+};
 document.getElementById('enviarP4').addEventListener('click',menssageDescipher);
 
 const pageStarD = () =>{
@@ -51,7 +53,7 @@ const pageStarD = () =>{
     const show = document.getElementById('Page1');
     hide.style.display = 'none';
     show.style.display = 'block';
-}
+};
 document.getElementById('enviarP1D').addEventListener('click',pageStarD);
 
 const pageStarC = () =>{
@@ -59,5 +61,5 @@ const pageStarC = () =>{
     const show = document.getElementById('Page1');
     hide.style.display = 'none';
     show.style.display = 'block';
-}
+};
 document.getElementById('enviarP1C').addEventListener('click',pageStarC);

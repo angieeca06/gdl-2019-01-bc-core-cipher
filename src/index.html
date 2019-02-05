@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -12,70 +13,90 @@
     <!--Página 1-->
     <section id="Page1">
       <h1>"Cifrado Cesar"</h1>
-      <p>Conocido como cifrado por desplazamiento,
+      <p id="texto">Conocido como cifrado por desplazamiento,
         es un tipo de cifrado por sustitución en el
         que una letra en el texto original es reemplazada
         por otra letra que se encuentra un número fijo de
         posiciones más adelante en el alfabeto.
         <a target="_blank" href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar">Da click para saber
           más sobre el cifrado cesar</a></p>
-       <br />
-        <br />
-      <p>¿Qué deseas realizar?</p>
-        <br />
+      <p class="firstAsk">¿Qué deseas realizar?</p>
         <br />
       <form>
-        <button type="button" id='cifrar'>Cifrar</button>
-        <button type="button" id='descifrar'>Descifrar</button>
+        <button type="button" id="cifrar">Cifrar</button>
+        <button type="button" id="descifrar">Descifrar</button>
       </form>
     </section>
     <!--Página 2-->
     <div id="Page2">
-      <form id="clear">
-        
-          <label for="posicionesC">¿Cuántas posiciones deseas desplazar?</label>
-            <br />
+      <form class ="clear">
+          <br/>
+        <label for="posicionesC">¿Cuántas posiciones deseas desplazar?</label>
+      <br />
           <input type="number" id="posicionesC" placeholder="Posiciones de desplazamiento" autofocus>
+          <br />
+          <br />
           <br />
         <label for="mensajeC">¿Cuál es el mensaje que deseas cifrar?</label>
            <br />
           <input type="text" id="mensajeC" placeholder="Escribe tu mensaje aquí">
           <br />
-          <button type="reset" name="limpiar">Limpiar</button>
           <br />
+          <button type="reset" class="limpiar">Limpiar</button>
+          <button type="text" id="enviarP3">Enviar</button>
       </form>
-      <button type="text" id='enviarP3'>Enviar</button>
+ 
     </div>
     <!--Página 3-->
     <div id="Page3">
-      <h2>Tu mensaje cifrado es...<span id="resultadoC"></span></h2>
-        <br />
-        <br />
-      <button type="text" id='enviarP1C'>Volver al inicio</button>
+        <br/>
+        <br/>
+        <br/>
+      <h2>Tu mensaje cifrado es...
+        <br/>
+        <br/>
+        <br/>
+        <span id="resultadoC"></span>
+      </h2>
+      <br />
+      <br />
+      <button type="text" id="enviarP1C">Volver al inicio</button>
     </div>
     <!--Página 4-->
     <div id="Page4">
-      <form>
-      <label for="posicionesD">¿Cuántas posiciones desplazadas tiene el cifrado?</p>
-       <br />
-        <input type="number" id="posicionesD" placeholder="Posiciones del cifrado">
+      <form class="clear">
+          <br />
+          <label for="posicionesD">¿Cuántas posiciones desplazadas tiene el cifrado?</label>
         <br />
-      <label for="mensajeD">¿Cuál es el mensaje que deseas descifrar?</label>
-       <br />
-        <input type="text" id="mensajeD" placeholder="Escribe tu mensaje aquí">
+          <input type="number" id="posicionesD" placeholder="Posiciones del cifrado" autofocus>
         <br />
-      <button type="text" id='enviarP4'>Enviar</button>
-      <br />
-        <button type="reset" name="limpiar">Limpiar</button>
-      <br />
-    </form>
+        <br />
+        <br />
+          <label for="mensajeD">¿Cuál es el mensaje que deseas descifrar?</label>
+        <br />
+          <input type="text" id="mensajeD" placeholder="Escribe tu mensaje aquí">
+        <br />
+        <br />
+          <button type="reset" class="limpiar">Limpiar</button>
+          <button type="text" id="enviarP4">Enviar</button>
+        <br />
+      </form>
+
     </div>
     <!--Página 5-->
     <div id="Page5">
-      <p>Tu mensaje descifrado es...<span id=resultadoD></span></p>
-       <br />
-       <br />
-      <button type="text" id='enviarP1D'>Volver al inicio</button>
+        <br />
+        <br />
+        <br />
+      <h3>Tu mensaje descifrado es...
+        <br />
+        <br />
+        <br />
+        <span id="resultadoD"></span>
+      </h3>
+      <br />
+      <br />
+      <button type="text" id="enviarP1D">Volver al inicio</button>
     </div>
   </div>
   <script src="cipher.js"></script>
