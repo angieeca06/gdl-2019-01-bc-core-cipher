@@ -30,7 +30,9 @@ body{
 }
 
 h1{
-    font-size: 100px;
+    margin-top: 100px;
+    padding-top: 50px;
+    font-size: 100px !important;
     color: rgb(255, 0, 140);
     text-align: center;
     font-family:cursive,'Courier New', Courier, monospace;
@@ -39,10 +41,15 @@ h1{
 #texto{
     color:rgb(88, 12, 31);
     text-align: center;
-    font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.texto{
+    font-size: 40px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
 #texto a{
     color: palevioletred;
 }
@@ -51,6 +58,10 @@ h1{
     color: coral;
     text-align: center;
     font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Courier New', Courier, monospace
 }
 #cifrar, #descifrar, #enviarP3, #enviarP4, .limpiar{
