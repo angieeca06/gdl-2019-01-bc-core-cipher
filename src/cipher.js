@@ -3,7 +3,7 @@ window.cipher = {
    encode: (offSet, letter) =>{
     let result = '';
     for(let i=0; i<letter.length; i++){
-        let nAscii = letter.charCodeAt(i)
+        let nAscii = letter.charCodeAt(i);
         if(nAscii>=97 && nAscii<=122){
             let nletra = letter.charCodeAt(i);
             let formula = ((nletra - 97 + offSet) % 26 )+ 97;
@@ -22,7 +22,7 @@ window.cipher = {
   decode: (offSet,letter) =>{
     let result = '';
     for(let i=0; i<letter.length; i++){
-        let nAscii = letter.charCodeAt(i)
+        let nAscii = letter.charCodeAt(i);
         if(nAscii>=97 && nAscii<=122){
             let nletra = letter.charCodeAt(i);
             let formula = ((nletra + 97 - offSet) % 26 )+ 97;
