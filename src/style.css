@@ -24,7 +24,15 @@
 }
  
 body{
-    background-image:url(https://image.freepik.com/vector-gratis/fondo-pintura-acuarela-rosa-vibrante_53876-58930.jpg);
+    /* background-image:url(https://image.freepik.com/vector-gratis/fondo-pintura-acuarela-rosa-vibrante_53876-58930.jpg); */
+    background: rgb(252,236,252);
+    background: -moz-linear-gradient(left, rgb(252,236,252) 0%, rgb(252,236,252) 0%, rgb(251,166,225) 52%, rgb(251,166,225) 52%, rgb(255,124,216) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgb(252,236,252)), color-stop(0%, rgb(252,236,252)), color-stop(52%, rgb(251,166,225)), color-stop(52%, rgb(251,166,225)), color-stop(100%, rgb(255,124,216)));
+    background: -webkit-linear-gradient(left, rgb(252,236,252) 0%, rgb(252,236,252) 0%, rgb(251,166,225) 52%, rgb(251,166,225) 52%, rgb(255,124,216) 100%);
+    background: -o-linear-gradient(left, rgb(252,236,252) 0%, rgb(252,236,252) 0%, rgb(251,166,225) 52%, rgb(251,166,225) 52%, rgb(255,124,216) 100%);
+    background: -ms-linear-gradient(left, rgb(252,236,252) 0%, rgb(252,236,252) 0%, rgb(251,166,225) 52%, rgb(251,166,225) 52%, rgb(255,124,216) 100%);
+    background: linear-gradient(to right, rgb(252,236,252) 0%, rgb(252,236,252) 0%, rgb(251,166,225) 52%, rgb(251,166,225) 52%, rgb(255,124,216) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff7cd8', GradientType=1 );
     background-attachment: fixed;
     background-size: 100%; 
 }
